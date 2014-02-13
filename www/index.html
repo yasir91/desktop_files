@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+        
+        <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.0.min.css">
+        <link rel="stylesheet" href="_assets/css/jqm-demos.css">
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="js/jquery.js"></script>
+        <script src="_assets/js/index.js"></script>
+        <script src="js/jquery.mobile-1.4.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.lazyload.min.js" ></script>
+    	
+        <!-- TinyMCE -->
+<script type="text/javascript" src="http://www.shadi.com/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+	tinyMCE.init({
+		mode : "textareas",
+		theme : "simple"
+	});
+</script>
+<!-- /TinyMCE -->
+    
+    </head>
+    <body>
+<!-- #one ------------------------------------------------------------------ -->
+<div data-role="page" id="one">
+
+	<div data-role="header" data-theme="b">    	
+		<h1><b>Shadi Admin</b></h1>
+        <a class="logout ui-btn ui-icon-lock ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Logout</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+        <img src="img/logo.png" width="100%" style="max-width: 223px; margin: 0 auto; display: block; margin-top: 20px;">
+        <h2 style="text-align:center;">Dashboard</h2>
+        <br/>
+		<ul data-role="listview" data-inset="true">
+        <li><a href="#searchmember">Search Member</a></li>
+        <li><a href="#approvals">Approve/Disapprove</a></li>
+        <li><a href="#newletters">Newletters</a></li>        
+        </ul>
+        
+        
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<p style="font-size:10px; font-weight:normal; width:100%; text-align:center;">© 1997 - 2014 Shadi.com</p>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!-- #search member ------------------------------------------------------------------ -->
+<div data-role="page" id="searchmember">
+
+	<div data-role="header" data-theme="b">    	
+		<h1><b>Shadi Admin</b></h1>
+        <a class="logout ui-btn ui-icon-lock ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Logout</a>
+        <a data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Back</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" >
+        <img src="img/logo.png" width="100%" style="max-width: 223px; margin: 0 auto; display: block; margin-top: 20px;">
+        <h2 style="text-align:center;">Search Member</h2> 
+		<form id="search_member" action="" method="post">
+        <p><input type="text" name="keyword" id="keyword" placeholder="Profile id or Email" value="4149872" data-clear-btn="true"></p>
+        <p><input type="hidden" name="fromMob" id="fromMob" value="mob"></p>
+        
+		<p><input type="submit" value="Display Profile"></p>
+		</form>
+        
+	</div><!-- /content -->
+    
+    
+
+
+
+
+	<div data-role="footer" data-theme="a">
+		<p style="font-size:10px; font-weight:normal; width:100%; text-align:center;">© 1997 - 2014 Shadi.com</p>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+
+
+
+<!-- #mem_detail ---------------------------------------------------------- -->
+<div data-role="page" id="mem_detail" data-theme="a">
+	<div data-role="header" data-theme="b">    	
+		<h1><b>Shadi Admin</b></h1>
+        <a class="logout ui-btn ui-icon-lock ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Logout</a>
+        <a data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Back</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div id="pf-content"></div>       
+	</div><!-- /content -->
+    
+   <div data-role="panel" id="left-panel" data-theme="b">
+        <p>Left reveal panel.</p>
+        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
+    </div><!-- /panel -->  
+     
+     
+     
+	<div data-role="footer" data-theme="a">
+		<p style="font-size:10px; font-weight:normal; width:100%; text-align:center;">© 1997 - 2014 Shadi.com</p>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+
+
+
+
+<!-- Page: #login ------------------------------------------------------------------ -->
+<div data-role="page" id="login" data-theme="a">
+	<div data-role="header" data-theme="b">
+     <h1>Admin Login</h1>
+        <a data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all">Back</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+    <img src="img/logo.png" width="100%" style="max-width: 223px; margin: 0 auto; display: block; margin-top: 20px;">
+		<h4>Please enter your user and password</h4>
+		
+        <form id="login_form" action="" method="post">
+        <p><input type="text" name="admin_name" id="admin_name" placeholder="User" value="" data-clear-btn="true"></p>
+        <p><input type="password" name="admin_pass" id="admin_pass" placeholder="Password" value="" data-clear-btn="true"></p>		
+        
+        <p><input type="hidden" name="btnLogin" id="btnLogin" value="Login"></p>
+        <p><input type="hidden" name="fromMob" id="fromMob" value="mob"></p>
+        
+		<p><input type="submit" id="login_btn" name="login_btn" value="Submit"></p>
+		</form>
+	</div><!-- /content -->
+    
+    
+    
+    
+    
+	<div data-role="footer" data-theme="a">
+		<p style="font-size:10px; font-weight:normal; width:100%; text-align:center;">© 1997 - 2014 Shadi.com</p>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+
+
+
+
+
+<!-- Start of second page: #three ------------------------------------------------------------------ -->
+<div data-role="page" id="three" data-theme="a">
+	<div data-role="header">		
+        <h1>Private Feed</h1>        
+        <a href="#one" class="ui-btn ui-icon-home ui-btn-icon-right">Home</a>
+        <a data-rel="back" class="ui-btn ui-icon-back ui-btn-icon-left">Back</a>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div id="pf-content-1"></div>       
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<p style="font-size:10px; font-weight:normal; width:100%; text-align:center;">© 1997 - 2014 Shadi.com</p>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of third page: #popup ------------------------------------------------------------------ -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="b">
+		<h1>Dialog</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Popup</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+		<p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<p style="font-size:10px; font-weight:normal; width:100%; text-align:center;">© 1997 - 2014 Shadi.com</p>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+        
+        
+        
+        
+        
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+app.initialize();
+
+
+
+
+
+
+
+jQuery(document).ready(function($) {
+	
+
+ 
+	
+	$( document ).on( "pagecreate", "#mem_detail", function() {
+    $( document ).on( "swipeleft swiperight", "#mem_detail", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft" ) {
+                $( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+        }
+    });
+});
+	
+	
+	//alert(window.localStorage.getItem("admin_id"));
+$('.logout').on("click",function(e) {
+ $.mobile.changePage("#login");
+ window.localStorage.removeItem("admin_id");	 
+});
+
+
+
+$('#login_form').on('submit',function(e) {
+  me = this;  
+  e.preventDefault();  //=== To Avoid Page Refresh and Fire the Event "Click"===
+  $('body').addClass('ui-loading');	  
+  $.ajax({
+	url:"http://www.shadi.com/mobajax/admin_login.php",
+	data:$(me).serialize(),
+	type:"POST",
+	success:function(data){
+	 $('body').removeClass('ui-loading');
+	 if(data!=""){
+		 $.mobile.changePage("#one");
+		window.localStorage.setItem("admin_id", data);
+	    
+	 }else{
+	    alert("This Admin does not exist.");
+		window.localStorage.removeItem("admin_id");	 
+	 }
+	},
+	fail: function(XMLHttpRequest, textStatus, errorThrown) {alert("Status: " + textStatus+" \n"+"Error: " + errorThrown);} 
+  });  
+});
+
+
+$('#search_member').on('submit',function(e) {
+  me = this;
+  e.preventDefault();  //=== To Avoid Page Refresh and Fire the Event "Click"===
+  $('body').addClass('ui-loading');	  
+  $.ajax({
+	url:"http://www.shadi.com/mobajax/search_member.php",
+	data:$(me).serialize(),
+	type:"POST",
+	success:function(data){
+	 
+	 if(data!=""){	
+		
+		
+		$.ajax({
+		url:"http://www.shadi.com/mobajax/member_detail.php",
+		data:"user_id="+data,
+		type:"POST",
+		success:function(html){
+			$('#pf-content').html(html);
+			$('#pf-content').trigger("create");
+			$.mobile.changePage("#mem_detail");
+			$('body').removeClass('ui-loading');
+			
+			
+			
+			
+			$('#btn_approve_disapprove').on("click",function(e) {
+				$('#approved_unapproved').css("display", "none");				
+				
+				if ($('.cme:checked').length == 0){
+					if($("#approved_unapproved").attr("title")==0)	$('#approving').css("display",""); 
+					else $('#approving').css("disapproving","");
+				}else{
+					if ($('#reason option:selected').val()==6 ||$('#reason option:selected').val()==8 || $('#reason option:selected').val()==9){                  
+                      send_reason_for_deletion($("#uid").attr('title'),$("#mem_ty").attr('title'),$("#mem_na").attr('title'),$("#mem_em").attr('title'), $('#delete_reasons').val());					  
+                    }				
+				} 
+				alert($("#approved_unapproved").attr("title"));
+				if($("#approved_unapproved").attr("title")) mem_ap = 1;
+				else mem_ap = 0;
+				
+				approve_disapprove($("#uid").attr('title'),mem_ap);
+			});
+			
+			
+			
+			
+			
+			
+			var fmsg = "";
+ var delete_reason = "";
+ var oldcaption = $('#btn_approve_disapprove').val();
+ $('.cme').on('click',function(e) {
+	 
+   delete_reason = "";   
+   
+   if ($('#about').prop('checked') == true){delete_reason +="<li><b>About Myself:</b> Please review your about myself information.</li>";}
+   if ($('#fname').prop('checked') == true){delete_reason +="<li><b>First Name:</b> <?=$row_profile['first_name']?> | There is no such first name please open support ticket to change it.</li>";}   
+   if ($('#sname').prop('checked') ==true){delete_reason +="<li><b>Screen Name:</b> Please choose some other screen name <b><?=$row_profile['screen_name']?></b>.</li>";}   
+   if ($('#gender').prop('checked') ==true){delete_reason +="<li><b>Image Incorrect:</b> Your image does not match your mentioned gender. Please upload correct image.</li>";}   
+   if ($('#uage').prop('checked') ==true){delete_reason +="<li><b>Age Query:</b> The age mentioned in the profile is <b><?=$row_profile['age']?></b>. Please confirm this is the age of the person whose profile is being created.</li>";}   
+   if ($('#education').prop('checked') ==true){delete_reason +="<li><b>Profession Incorrect:</b> The profession mentioned in the profile is <b><?=$profession_arr[$row_profile['occupation']]?></b> does not match education <b><?=$education_arr[$row_profile['education']]?></b> or age <b><?=$row_profile['age']?></b>.</li>";}   
+   if ($('#phone').prop('checked') ==true){delete_reason +="<li><b>Contact Number Incorrect:</b> The contact number mentioned in the profile is <b><?=$row_profile['phone']?></b>.</li>";}   
+   if ($('#country').prop('checked') ==true){delete_reason +="<li><b>Country Incorrect:</b> The country mentioned in the profile is <b><?=$row_country['country']?></b>.</li>";}   
+   if ($('#cperson').prop('checked') ==true){delete_reason +="<li><b>Contact Person Incorrect:</b> The contact person field was not filled correctly.</li>";}
+   
+   /*if ($('#uemail').prop('checked') ==true){delete_reason +="<li><b>Email Address Incorrect:</b> Please correct your email address.</li>";}*/
+   if ($('#incom').prop('checked') == true){
+	   $('#reason').prop("value",11);
+	   $("#btn_approve_disapprove").val($('#reason').find(":selected").text());
+	   $("#btn_approve_disapprove").button('refresh') ;
+	    delete_reason = "";
+   }else{   
+	   $('#reason').prop("value",9); 
+	   $("#btn_approve_disapprove").val($('#reason').find(":selected").text());
+	   $("#btn_approve_disapprove").button('refresh') ;	   
+   }
+   
+   alert("reason value="+$('#reason').prop('value')+", text="+$('#reason').find(":selected").text()+", incom checked="+$('#incom').prop('checked')+", length="+$(".cme").find(":checked").length);
+   
+   if ($("input[class=cme]").filter(":checked").length == 6 && $('#incom').prop('checked') != true){
+	   $('#reason').prop("value",6); 
+	   $("#btn_approve_disapprove").val($('#reason').find(":selected").text());
+	   $("#btn_approve_disapprove").button('refresh') ;
+	   }
+   if ($("input[class=cme]").filter(":checked").length == 0){
+	   $("#btn_approve_disapprove").val(oldcaption);
+	   $("#btn_approve_disapprove").button('refresh') ;
+	   }
+   
+   $('#delete_reasons').prop("value",delete_reason);
+   alert("Reasons for deletion="+$('#delete_reasons').prop("value"));
+   
+ });
+ 
+ function setbtn(txt){
+          $("#btn_approve_disapprove").prev('a').find('span.ui-btn-text').text(txt);
+		  $("#btn_approve_disapprove").button('refresh') ;
+}
+ 
+ $("#editAbout").on("click",function(e) {
+   $(this).hide();   
+   $("#aboutText").hide();
+   
+   $("#doneEdit").show();
+   $("#cancelEdit").show();
+   $("#aboutEdit").show();  
+   $(this).parent().find("#tinymce").css({'background-color':'#000'});
+ });
+ 
+ $("#cancelEdit").on("click",function(e) {
+   $("#editAbout").show();   
+   $("#aboutText").show();
+   
+   $("#doneEdit").hide();
+   $("#cancelEdit").hide();
+   $("#aboutEdit").hide();   
+ });
+  
+ $("#doneEdit").on("click",function(e) {
+  $("#aboutMe").submit();
+ });
+ 
+ 
+ $('#aboutMe').on('submit',function(e) {
+  me = this;
+  e.preventDefault();
+  $('#loader').show();
+  $.ajax({
+	url:"http://www.shadi.com/mobajax/edit_about.php",
+	data:$(me).serialize(),
+	type:"POST",
+	success:function(res){
+		$("#aboutText").text(res);
+		$("#aboutText").show();
+		$("#editAbout").show();
+	   
+		$("#doneEdit").hide();
+		$("#cancelEdit").hide();
+		$("#aboutEdit").hide(); 
+		$('#loader').hide();
+	 }
+	});
+		
+  });
+  
+  
+  
+  
+  
+function approve_disapprove(id, is_approved)
+{ 
+  document.getElementById('dots').style.display = '';
+  if ($(".cme:checked").length == 0){
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_approve_disapprove.php",
+       data: "id="+id+"&is_approved="+is_approved+"&admin_id="+admin_id,
+       success: function(msg){
+		if (is_approved){
+		  document.getElementById('approving').innerHTML='Approving...Done!<br/>';
+		  		  		  
+		 send_welcome_email(id,$("#mem_ty").attr('title'),$("#mem_na").attr('title'),$("#mem_em").attr('title'));			 
+		  
+		  fmsg = msg;
+		  automatch_ajax();
+		}else{		
+		 document.getElementById('approved_unapproved').style.display='';
+		 document.getElementById('disapproving').style.display='none';
+		 document.getElementById('approved_unapproved').innerHTML=msg;	
+		 document.getElementById('dots').style.display = 'none';
+		}		
+       }
+     });
+  }else{
+	  document.getElementById('deleting').style.display='';
+	  if ( confirm('Are you sure you want to delete this member')){delete_form.submit();}
+	  else{ 
+	   document.getElementById('deleting').style.display='none';
+	   document.getElementById('disapproving').style.display='none';
+	   document.getElementById('approving').style.display='none';
+	   document.getElementById('dots').style.display = 'none';
+	   document.getElementById('approved_unapproved').style.display='';	
+	   
+	  }
+  }
+}
+function send_welcome_email(id,mem_type,mem_name,mem_email)
+{
+	document.getElementById('wEmail').style.display='';
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_welcome_email.php",
+       data: "id="+id+"&mem_type="+mem_type+"&mem_name="+mem_name+"&mem_email="+mem_email,
+       success: function(msg){	   
+		   document.getElementById('wEmail').innerHTML="Sending welcome email..."+msg+"<br/>";
+		   if( $("#ImagePhoto").attr('title') == '' ){
+			  photo_reminder_email(id,$("#mem_na").attr('title'),$("#mem_em").attr('title'));
+		   }
+       }
+     });
+}
+
+
+function automatch_ajax(){
+	document.getElementById('searchAutomatch').style.display = '';
+	$.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_automatch.php",
+	   data: "user_id="+$("#uid").attr('title'),
+       success: function(msg){
+		 //document.getElementById('sendAutomatch').style.display = 'none';
+		 //document.getElementById('approved_unapproved').innerHTML+="<br/>"+msg;
+		 
+		 document.getElementById('searchAutomatch').innerHTML='Searching for matches...Done!<br/>';	
+	     automatch_email();
+       }
+     });
+}
+function automatch_email(){
+	document.getElementById('sendAutomatch').style.display = '';
+	 $.ajax({
+	   type: "POST",
+	   url: "http://www.shadi.com/mobajax/ajax_automatch.php",
+	   data: "msg=continue&user_id="+$("#uid").attr('title'),
+	   success: function(msg){
+		  if(msg!='0'){
+			  //document.getElementById('sendMatch').style.display = 'none';
+			  document.getElementById('sendAutomatch').innerHTML='Sending this profile to other Members... Sent to '+msg+' New Match(es)<br/>';	
+		  	  //document.getElementById('approved_unapproved').innerHTML+="<br/>"+msg+' New Match(es) Sent!';
+			  //alert(msg+' New Match(es) Sent!');
+			  automatch_p_partner();
+		  }
+		  else{
+			  //document.getElementById('sendMatch').style.display = 'none';
+			  //document.getElementById('spnAutoMatches').innerHTML=msg+' Match';
+			  alert(msg+' Match');
+		  }
+	   }
+	 });
+}
+
+function automatch_p_partner(){
+	document.getElementById('sendpartner').style.display = '';
+	 $.ajax({
+	   type: "POST",
+	   url: "http://www.shadi.com/mobajax/ajax_automatch.php",
+	   data: "msg=p_partner&user_id="+$("#uid").attr('title'),
+	   success: function(msg){
+		   document.getElementById('sendpartner').innerHTML="Sending other profiles to this Member..."+msg+' New Match(es) Sent!<br/>';
+		   document.getElementById('approved_unapproved').style.display='';
+		   document.getElementById('approved_unapproved').innerHTML="All done. Auto close in 5";		  
+          
+		  var secs = 5; 
+		  var intv = setInterval(function(){
+			      --secs;
+				  document.getElementById('approved_unapproved').innerHTML="All done. Auto close in "+secs;
+				  if (secs < 1){ clearInterval(intv); $.mobile.changePage("#searchmember"); }				 
+				 }, 1000);
+	   }
+	 });
+}
+ 
+
+function photo_reminder_email(id,mem_name,mem_email)
+{   
+    document.getElementById('photoRem').style.display='';
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_photo_reminder.php",
+       data: "id="+id+"&mem_name="+mem_name+"&mem_email="+mem_email,
+       success: function(msg){
+		 document.getElementById('photoRem').innerHTML="Sending photo reminder..."+msg+"<br/>";		 
+       }
+     });
+}
+
+function improve_photo_reminder_email(id,mem_type,mem_name,mem_email)
+{
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_improve_photo_reminder_email.php",
+       data: "id="+id+"&mem_type="+mem_type+"&mem_name="+mem_name+"&mem_email="+mem_email,
+       success: function(msg){
+		 document.getElementById('spnReminders').innerHTML=msg;
+       }
+     });
+}
+function login_reminder_email(id,user_pass,mem_name,mem_email)
+{
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/login_reminder_email.php",
+       data: "id="+id+"&user_pass="+user_pass+"&mem_name="+mem_name+"&mem_email="+mem_email,
+       success: function(msg){
+		 document.getElementById('spnReminders').innerHTML=msg;
+       }
+     });
+}
+function improve_profile_reminder_email(id,mem_type,mem_name,mem_email)
+{
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_improve_profile_reminder_email.php",
+       data: "id="+id+"&mem_type="+mem_type+"&mem_name="+mem_name+"&mem_email="+mem_email,
+       success: function(msg){
+		 document.getElementById('spnReminders').innerHTML=msg;
+       }
+     });
+}
+function send_subscription_email(id,mem_type,mem_name,mem_email)
+{
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_send_subscription_email.php",
+       data: "id="+id+"&mem_type="+mem_type+"&mem_name="+mem_name+"&mem_email="+mem_email,
+       success: function(msg){
+		 document.getElementById('spnReminders').innerHTML=msg;
+       }
+     });
+}
+
+function send_reason_for_deletion(id, mem_type, mem_name, mem_email, delete_reason){
+	$.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_send_deletion_reason.php",
+       data: "id="+id+"&mem_type="+mem_type+"&mem_name="+mem_name+"&mem_email="+mem_email+"&delete_reason="+delete_reason,
+       success: function(msg){
+		   alert(delete_reason+"---"+msg);
+		 //document.getElementById('spnReminders').innerHTML=msg;
+       }
+     });
+}
+
+function send_phone_correction_email(id,mem_type,mem_name,mem_email)
+{
+    $.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/ajax_send_phone_correction_email.php",
+       data: "id="+id+"&mem_type="+mem_type+"&mem_name="+mem_name+"&mem_email="+mem_email,
+       success: function(msg){
+		 document.getElementById('spnReminders').innerHTML=msg;
+       }
+     });
+}
+
+
+
+
+
+function frontpage_member(id){
+	$.ajax({
+       type: "POST",
+       url: "http://www.shadi.com/mobajax/front_page_member.php",
+	   data: "id=<?php echo $user_id; ?>",
+       success: function(msg){
+		 document.getElementById('spnfront_page').innerHTML=msg;
+       }
+     });
+} 
+ 
+ 			
+			
+			
+			
+		  },
+		  fail: function(XMLHttpRequest, textStatus, errorThrown) {alert("Status: " + textStatus+" \n"+"Error: " + errorThrown);} 
+		});  
+  
+		
+		
+		
+		
+		
+		//window.localStorage.setItem("admin_id", data);
+	    //$.mobile.changePage("#one")
+	 }else{
+		 alert("Empty"+data);
+	    //alert("This Admin does not exist.");
+		//window.localStorage.removeItem("admin_id");	 
+	 }
+	},
+	fail: function(XMLHttpRequest, textStatus, errorThrown) {alert("Status: " + textStatus+" \n"+"Error: " + errorThrown);} 
+  });  
+});  
+ 
+ $('#three').on('pageshow', function(event) {
+   if($('#pf-content').html()==''){
+	  $('body').addClass('ui-loading');
+	  dataString = "fname=Fazeel&myimg=" + escape("http://www.shadi.com/imagehandler.php?f=4149872.jpg&ua=0&t=1")+"&gender=1&age=31&country_id=187&religion=8&mem_type=1&countfeeds=0&act=mobfeeds";	
+	  $.ajax({
+		type: "POST",
+		url: "http://www.shadi.com/more_feeds.php",
+		data: dataString,				  
+		dataType: "html",
+		cache: false,
+		async: false,
+		success: function(html){
+		   //$.mobile.hidePageLoadingMsg();
+		   alert('wo hoooo');
+		   $('body').removeClass('ui-loading');
+		   $('#pf-content').html('something was loaded: '+html);
+		   $('#pf-content').trigger("create");
+		   $("img.lazy").lazyload({ effect : "fadeIn", threshold : 1700});
+		 },
+		error: function(e){  
+		  //$.mobile.hidePageLoadingMsg();
+		  alert('Error: ' + e);
+		}  
+	  });				
+	}				
+  });
+ var admin_id;
+ if (window.localStorage.getItem("admin_id")==null){
+	$.mobile.changePage("#login");
+ }else{
+   admin_id = window.localStorage.getItem("admin_id");	 
+ }
+
+});
+
+
+
+
+
+
+</script>
+    </body>
+<style>
+/* Swipe works with mouse as well but often causes text selection. */
+#demo-page * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* Content styling. */
+dl { font-family: "Times New Roman", Times, serif; padding: 1em; }
+dt { font-size: 2em; font-weight: bold; }
+dt span { font-size: .5em; color: #777; margin-left: .5em; }
+dd { font-size: 1.25em; margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #eee; }
+.back-btn { float: right; margin: 0 2em 1em 0; }
+
+
+.feeds1 {
+display: block;
+position: relative;
+width: 100%;
+padding-left: 15px;
+padding-right: 15px;
+color: #888;
+overflow: hidden;
+padding-bottom: 40px;
+-webkit-transition: all .2s linear;
+-moz-transition: all .2s linear;
+transition: all .2s linear;
+border-top: 1px solid #ccc;
+padding-top: 20px;
+margin:0px 0px 0px -15px ;
+}
+.feed_updates {
+	width: 100%;
+	
+}
+.prof_screen_name {
+	color: #980000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.thumbs {
+display: inline-block;
+margin-top: 15px;
+margin-left: 10px;
+min-height: 55px;
+width:55px;
+background-image: url(images/ajax-loader.gif);
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}
+
+.img_cont {
+position: relative;
+overflow: hidden;
+height: 126px;
+width: 126px;
+border: 1px solid #F8F8F8;
+margin: 10px 0px 5px 0px;
+border-radius: 3px;
+box-shadow: 0px 6px 12px -5px rgba(0, 0, 0, 0.29);
+background-image: url(images/ajax-loader.gif);
+background-repeat: no-repeat;
+background-position: 50% 50%;
+}
+.img_cont img {
+	position: absolute;
+ -webkit-transition: all .2s linear;
+-moz-transition: all .2s linear;
+transition: all .2s linear;
+}
+.t_tag {
+	color:#888 !important;
+}
+.feed_updates a {
+	font-size:10px;
+	color: #555;
+	text-decoration: none;
+}
+.feed_updates a:hover {
+	color: #980000;
+}
+.comment_box {
+float: left;
+width: 99%;
+}
+.comment_box ul {
+width: 100%;
+float: left;
+list-style: none;
+padding: 0;
+margin: 0;
+margin-top: 10px;
+background: #FFFFFF;
+border: 1px solid #ECECEC;
+border-radius: 3px;
+box-shadow: inset 0px -49px 150px -71px rgba(0, 0, 0, 0.11);
+-webkit-box-shadow: inset 0px -49px 150px -71px rgba(0, 0, 0, 0.11);
+-moz-box-shadow: inset 0px -49px 150px -71px rgba(0, 0, 0, 0.11);
+}
+.comment_box ul li {
+width: 99.4%;
+float: left;
+margin: 5px;
+border-bottom: 1px solid #F1F1F1;
+}
+.comment_box ul li img {
+	width:5.5%;
+	float: left;
+	margin-right: 5px;
+	border-radius: 3px;
+}
+.comment_box ul li p {
+float: left;
+margin: 0;
+padding: 0;
+vertical-align: top;
+}
+.comment_box ul li label {
+	font-size: 10px;
+	cursor: pointer;
+}
+.dates {
+	font-size: 10px;
+	color: #ccc;
+	display: inline-block;
+}
+.dates:hover {
+	color:#000;
+}
+.lazy {
+}
+#lastPostsLoader {
+	width: 100%;
+	text-align: center;
+	padding: 0px 0px 20px 0px;
+}
+.feeds {
+	display: block;
+	width: 510px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	color: #888;
+	border-radius: 3px;
+	border: 1px solid #E9E9E9;
+	overflow: hidden;
+	margin-bottom: 20px;
+	box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, .05);
+ -webkit-transition: all .2s linear;
+-moz-transition: all .2s linear;
+transition: all .2s linear;
+}
+.feeds h1 {
+	font-size: 15px;
+	font-weight: normal;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #E9E9E9;
+	padding: 10px 20px;
+	margin: -10px -21px 10px -21px;
+}
+.pbar-cont {
+	background-color: #ccc;
+	display: inline-block;
+	width: 300px;
+	height: 10px;
+	margin: 0px 0px -1px 20px;
+	border-radius: 6px;
+	box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+	border: 1px solid #fff;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.pbar-cont span {
+	background-color: #980000;
+	display: block;
+	width: 58%;
+	height: 10px;
+	margin: 0px 0px;
+	border-radius: 6px;
+	box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.89);
+}
+.fill-profile {
+	padding: 0px 20px;
+	float: left;
+	min-height: 100px;
+	width: 470px;
+	text-align: center;
+}
+.fill-profile h2 {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 15px 0 25px 0;
+}
+.fill-profile span.prof-feilds {
+	display: block;
+	width: 470px;
+	margin: 0 auto;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.fill-profile label {
+	display:block;
+}
+.fill-profile input[type="text"] {
+	display:block;
+	width:70%;
+}
+
+#gleft {
+	display: inline-block;
+	float: left;
+	width: 10px;
+	height: 30px;
+	background-color: #FCFCFC;
+	border: 1px solid #ECECEC;
+	border-radius: 0px 3px 3px 0px;
+	padding: 5px;
+	text-indent: -9000px;
+	background-position: -612px -565px !important;
+	box-shadow: inset -1px -1px 1px 0px #fff;
+	margin-left: -21px;
+	margin-right: -1px;
+}
+#gright {
+	display: inline-block;
+	float: right;
+	width: 10px;
+	height: 30px;
+	background-color: #FCFCFC;
+	border: 1px solid #ECECEC;
+	border-radius: 3px 0px 0px 3px;
+	padding: 5px;
+	text-indent: -9000px;
+	background-position: -631px -565px !important;
+	box-shadow: inset -1px -1px 1px 0px #fff;
+	margin-right: -21px;
+	margin-left: -1px;
+}
+#gright:hover, #gleft:hover {
+	background-color: #F7F7F7;
+}
+.add_details {
+}
+.btn_cont {
+	width: 100%;
+	display: block;
+	padding: 0px 0px 10px 0px;
+	margin-bottom: 20px;
+}
+.btn_cont2 {
+	display: block;
+	text-align: right;
+}
+.skipit {
+	float: right;
+	margin-top: 4px;
+	text-decoration: none;
+	color: #888;
+	padding-right: 20px;
+	background-position: -520px -607px !important;
+}
+.skipit:hover {
+	color: #000;
+}
+.save_prof {
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+#content {
+	background:#fff;
+}
+
+.addcomm{
+ display:none;	
+}
+
+#loader{
+	display:none;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background-color: rgba(255, 255, 255, 0.9);
+z-index: 4;
+	
+	}
+
+</style>
+</html>
